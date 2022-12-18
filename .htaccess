@@ -1,4 +1,0 @@
-AuthName "Page d'administration protégée, veuillez vous identifier"
-AuthType Basic
-AuthUserFile ".htpasswd"
-Require valid-user
