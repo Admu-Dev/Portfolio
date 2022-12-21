@@ -89,7 +89,7 @@ header .menu ul li a i{
 }
 
 header .menu ul li:hover a{
-  border-bottom: 2px solid rgba(0, 255, 255, 0.7);
+  border-bottom: 2px solid rgb(231, 38, 54);
 }
 
 header .Logo-title img {
@@ -116,7 +116,7 @@ ________________________________________________________________________________
   align-items: center;
   min-height: 100vh;
   position: relative;
-  background-image: url(ressources/images/Fond-Sport-Extreme.jpg);
+  background-image: url(ressources/images/Fond-Sport-Extreme.webp);
   background-size: 100%;
   background-position: center !important;
   background-repeat: no-repeat;

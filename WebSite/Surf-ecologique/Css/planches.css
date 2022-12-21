@@ -43,7 +43,7 @@ ________________________________________________________________________________
   
   .about-planches .container-cards-planches .cards {
     width: 600px;
-    height: 600px;
+    height: 650px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -91,23 +91,28 @@ ________________________________________________________________________________
 
 
  .about-planches .container-cards-planches .cards .yuyo {
-    width: 90%;
-    height: 90%;
+    width: auto;
+    height: 65%;
     border-radius: 10px;
  }
 
  .about-planches .container-cards-planches .cards .carton {
-    width: 60%;
-    height: 50%;
+    width: auto;
+    height: 40%;
     border-radius: 10px;
  }
 
  .about-planches .container-cards-planches .cards .text_carton {
-    height: 70%;
+    height: 65%;
     width: 85%;
  }
 
  .about-planches .container-cards-planches .cards .champignons {
-     height: 100%;
+     height: 50%;
      width: auto;
  }
+
+ .about-planches .container-cards-planches .cards .resine-lin {
+  height: 50%;
+  width: auto;
+  } 

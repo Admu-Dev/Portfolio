@@ -178,7 +178,7 @@ align-items: center;
 min-height: 100vh;
 position: relative;
 padding: 0 200px;
-background-image: url(ressources/images/home.jpg);
+background-image: url(ressources/images/home.webp);
 background-size: cover !important;
 background-position: center !important;
 }
