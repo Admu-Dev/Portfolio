@@ -61,7 +61,7 @@
 
   <!-- Google Fonts -->
   <link
-  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
   rel="stylesheet">
 
 </head>
@@ -75,15 +75,15 @@
   <header id="header">
     <div class="d-flex flex-column">
 
-<div class="profile">
+      <div class="profile">
         <img src="assets/img/profile-img.webp" alt="Image de Profile" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Adrien Muzeaux</a></h1>
         <div class="social-links mt-3 text-center">
-          <a rel="noopener" href="https://github.com/Admu-Dev" target="_blank" class="twitter"><i class="bx bxl-github"></i></a>
-          <a rel="noopener" href="https://www.facebook.com/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a rel="noopener" href="https://www.instagram.com" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a rel="noopener" href="https://twitter.com/" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a rel="noopener" href="https://fr.linkedin.com" target="_blank" lass="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a aria-label="Lien qui mène au github du développeur" rel="noopener" href="https://github.com/Admu-Dev" target="_blank" class="twitter"><i class="bx bxl-github"></i></a>
+          <a aria-label="Lien qui mène au facebook du développeur" rel="noopener" href="https://www.facebook.com/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a aria-label="Lien qui mène a l'instagram du développeur"rel="noopener" href="https://www.instagram.com" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a aria-label="Lien qui mène au twitter du développeur" rel="noopener" href="https://twitter.com/" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a aria-label="Lien qui mène au linkedin du développeur" rel="noopener" href="https://fr.linkedin.com" target="_blank" lass="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
@@ -628,7 +628,7 @@
               </div>
 
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23573.83659478809!2d2.3030844738110794!3d48.85366979508363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sus!4v1656622285455!5m2!1sfr!2sus"
+              title="Emplacement du développeur" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23573.83659478809!2d2.3030844738110794!3d48.85366979508363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sus!4v1656622285455!5m2!1sfr!2sus"
                 frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
 
@@ -642,17 +642,17 @@
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                  <label for="email">Your Email</label>
                   <input type="email" class="form-control" name="mail" id="email" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
+                <label for="subject">Subject</label>
                 <input type="text" class="form-control" name="subject" id="subject" required>
               </div>
               <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" rows="10" id="message" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
