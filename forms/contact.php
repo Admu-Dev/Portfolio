@@ -10,10 +10,19 @@
   $contact->from_email = $_POST['email'];
   $contact->subject = $_POST['subject'];
 
-  echo $contact->to;
-  echo $contact->from_name;
-  echo $contact->from_email;
-  echo $contact->subject;
+  echo "<script>console.log('{$contact->to}' );</script>";
+  echo "<script>console.log('{$contact->from_name}' );</script>";
+  echo "<script>console.log('{$contact->from_email}' );</script>";
+  echo "<script>console.log('{$contact->subject}' );</script>";
+  echo "<script>console.log('-------------------------------------' );</script>";
+
+  echo "<script>console.log('{$receiving_email_address}' );</script>";
+  echo "<script>console.log('{$_POST['name']}' );</script>";
+  echo "<script>console.log('{$_POST['email']}' );</script>";
+  echo "<script>console.log('{$_POST['subject']}' );</script>";
+
+  echo "<script>console.log('-------------------------------------' );</script>";
+  echo "<script>console.log('-------------------------------------' );</script>";
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
   /*
