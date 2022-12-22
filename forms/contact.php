@@ -1,40 +1,22 @@
 <?php
 /* Récupération des informations du formulaire*/
-if(isset($_POST['submit'])) {
   $name = stripslashes(trim($_POST['name']));
-  $email = stripslashes(trim($_POST['email']));
+  $email = stripslashes(trim($_POST['mail']));
   $subject = stripslashes(trim($_POST['subject']));
-  $message = stripslashes(trim($_POST['subject']));
+  $message = stripslashes(trim($_POST['message']));
 
   /*Vérifie si l'adresse mail est au bon format */
-  $regex_mail = '/^[-+.w]{1,64}@[-.w]{1,64}.[-.w]{2,6}$/i'; 
-  /*Verifie qu il n y est pas d en tête dans les données*/
-  $regex_head = '/[nr]/';   
+  $regex_mail = "#[a-z0-9]{1,}[\-\_\.a-z0-9]{0,}@[a-z]{2,}[\-\_\.a-z0-9]{0,}\.[a-z]{2,6}$#";
+
   /*Vérifie qu il n y est pas d erreur dans adresse mail*/
-  if (!preg_match($regex_mail, $email)){
-    $alert = "L'adresse '.$mail.' n'est pas valide";      
-  }else{ 
+  if (!preg_match($regex_mail, $_POST['mail'])){
+    echo $email;
+    $courriel = 0; 
+  }else{
     $courriel = 1;
   }   
-  /* On affiche l'erreur s'il y en a une */ 
-  if (!empty($alert)){
-    $courriel = 0;
-  }     
-  /* On vérifie qu'il n'y a aucun header dans les champs */ 
-  if (preg_match($regex_head, $name)
-  || preg_match($regex_head, $email)
-  || preg_match($regex_head, $subject)
-  || preg_match($regex_head, $message)) {  
-    $alert = 'En-têtes interdites dans les champs du formulaire'; 
-  }else{ 
-    $header = 1;
-  }   
-  /* On affiche l'erreur s'il y en a une */ 
-  if (!empty($alert)){
-    $header = 0;
-  }   
-  /* Si les variables sont bonne */
-  if ($header == 1 AND $courriel == 1){
+
+  if ($courriel == 1){
     /*Envoi du mail*/
 
     /*Le destinataire*/
@@ -54,11 +36,18 @@ if(isset($_POST['submit'])) {
     $headers .= "rn";
     /*L'envoi du mail - Et page de redirection*/
     mail($to, $sujet, $msg, $headers);
-    header('Location: ../index.html');
+    header('Location: ../index.html#contact');
+    echo '<script type="text/javascript">' . 
+    'document.getElementById("sent-message").innerHTML = "Your message has been sent. Thank you!";
+    
+    document.getElementById("sent-message").classList.add("alert-success")' .
+    '</script>';
   }else{
-  header('Location: ../index.html');
+    header('Location: ../index.html#contact');
+    echo '<script type="text/javascript">' . 
+    'document.getElementById("error-message").innerHTML = "Il y a eu un erreur lors de l\'envoie du mail. Si cela perciste, merci de m\'envoyer un mail directement sans passer par le site web";
+    
+    document.getElementById("error-message").classList.add("alert-danger")' .
+    '</script>';
   }
-}else {
-  header('Location: ../index.html');
-}
 ?>
