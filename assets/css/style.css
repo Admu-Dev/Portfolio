@@ -24,6 +24,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+
+*::-webkit-scrollbar {
+  width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #282C34
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(67, 85, 255, 0.8);
+  border-radius: 20px;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
