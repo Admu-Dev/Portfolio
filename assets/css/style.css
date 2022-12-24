@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(67, 85, 255, 0.8);
+  background-color: #173B60;
   border-radius: 20px;
 }
 
